@@ -1,0 +1,32 @@
+<div>
+    <h1>我是显示数据的</h1>
+    <table>
+        <% for(key in data) { %>
+            <% if(key === "address_info") { %>
+                <tr class="key">
+                    <td><%= key%></td>
+                    <td>
+                        <% for(address_info_key in data[key]) { %>
+                            <pre class="m10"><%= address_info_key%>：<%= data[address_info_key] %></pre>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }else if(key === "chrome_info"){%>
+                <tr class="key">
+                    <td><%= key%></td>
+                    <td>
+                        <% for(address_info_key in data[key]) { %>
+                            <pre class="m10"><%= address_info_key%>：<%= data[address_info_key] %></pre>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }else{ %>
+                <tr class="key">
+                    <td><%= key%></td>
+                    <td><%= data[key] %></td>
+                </tr>
+            <% } %>
+        <% } %>
+    </table>
+    
+</div>
